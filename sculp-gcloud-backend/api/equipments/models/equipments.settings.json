@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "equipments",
+  "info": {
+    "name": "Equipments"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Free_Weight",
+        "Racks_Bars_Benches",
+        "Cable_Machines",
+        "Weight_Machines",
+        "Other"
+      ]
+    }
+  }
+}
