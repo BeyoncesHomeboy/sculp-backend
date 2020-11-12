@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exercises",
+  "info": {
+    "name": "Exercise"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "equip": {
+      "model": "equip",
+      "via": "exercises"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "How_To_Video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Muscle_Targeted": {
+      "type": "enumeration",
+      "enum": [
+        "Abdominals",
+        "Abductors",
+        "Adductors",
+        "Biceps",
+        "Calves",
+        "Chest",
+        "Forearms",
+        "Glutes",
+        "Hamstrings",
+        "Lats",
+        "Lower_Back",
+        "Middle_Back",
+        "Neck",
+        "Quadriceps",
+        "Shoulders",
+        "Traps",
+        "Triceps"
+      ]
+    }
+  }
+}

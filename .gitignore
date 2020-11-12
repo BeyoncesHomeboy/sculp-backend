@@ -112,3 +112,7 @@ license.txt
 exports
 .cache
 build
+
+app.yaml
+
+# plugins/

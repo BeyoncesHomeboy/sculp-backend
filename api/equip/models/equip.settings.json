@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "equips",
+  "info": {
+    "name": "equip"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Free_Weights",
+        "Racks_Bars_Benches",
+        "Cable_Machines",
+        "Weight_Machines",
+        "Other"
+      ]
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "exercises": {
+      "via": "equip",
+      "collection": "exercise"
+    }
+  }
+}
